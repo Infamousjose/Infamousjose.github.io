@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Práctica Forms</title>
+<link rel="icon" href="Salle.png" type="image/x-icon">
+<!-- Cambio de la URL de Bootstrap para solucionar el problema -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.4.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #626262;
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+        transition: background-color 0.5s ease;
+        color: #333; /* Color de texto predeterminado */
+    }
+
+    .container {
+        position: relative;
+        width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco transparente */
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.5s ease;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    button[type="submit"],
+    button.theme-toggle {
+        width: 100%; /* Ajustar el tamaño del botón */
+        padding: 10px; /* Aumentar el relleno del botón */
+        margin-top: 10px; /* Espacio entre los botones */
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover,
+    button.theme-toggle:hover {
+        background-color: #2980b9;
+    }
+
+    .theme-toggle {
+        width: 100%; /* Ajustar el tamaño del botón */
+        padding: 10px; /* Aumentar el relleno del botón */
+        margin-top: 10px; /* Espacio entre los botones */
+        border-radius: 4px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>¡Registrate para Continuar!</h2>
+        <form action="https://www.toptal.com/developers/postbin/1709600872549-3227622080594">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombres:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellidos:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+            </div>
+            <div class="mb-3">
+                <label for="numero" class="form-label">Edad:</label>
+                <input type="number" class="form-control" id="edad" name="edad" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <button class="theme-toggle btn btn-secondary">Modo oscuro</button>
+    </div>
+
+    <script>
+        const themeToggleBtn = document.querySelector('.theme-toggle');
+        let isDarkTheme = false;
+
+        themeToggleBtn.addEventListener('click', function() {
+            const container = document.querySelector('.container');
+            const body = document.body;
+
+            if (!isDarkTheme) {
+                container.style.backgroundColor = '#000'; // Cambiar a negro
+                body.style.backgroundColor = '#222'; // Cambiar a fondo de cuerpo oscuro
+                document.body.style.color = '#2271B3'; // Cambiar color de texto a blanco
+                isDarkTheme = true;
+            } else {
+                container.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'; // Cambiar a blanco
+                body.style.backgroundColor = '#626262'; // Cambiar a fondo de cuerpo claro
+                document.body.style.color = '#333'; // Restablecer color de texto predeterminado
+                isDarkTheme = false;
+            }
+        });
+    </script>
+</body>
+</html>
