@@ -1,0 +1,22 @@
+{
+    "en": {
+      "heading": "Welcome!",
+      "paragraph": "Welcome to our website."
+    },
+    "zh": {
+      "heading": "欢迎!",
+      "paragraph": "欢迎来到我们的网站。"
+    },
+    "ar": {
+      "heading": "أهلاً وسهلاً!",
+      "paragraph": "مرحبًا بك في موقعنا على الويب."
+    },
+    "es": {
+      "heading": "¡Bienvenido!",
+      "paragraph": "Bienvenido a nuestro sitio web."
+    },
+    "hi": {
+      "heading": "स्वागत है!",
+      "paragraph": "हमारी वेबसाइट में आपका स्वागत है।"
+    }
+  }
